@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6032644A-3FA2-4D1F-8307-8F5B1BBB1400}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Administrator\Home.aspx" />
+    <Content Include="Administrator\ReportedUsers.aspx" />
+    <Content Include="Administrator\ShareWithExplorer.aspx" />
+    <Content Include="Administrator\TermsAndCondition.aspx" />
+    <Content Include="Contacts\Contacts.aspx" />
+    <Content Include="FlickrPhotos.aspx" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="App_Data\Flickr1.mdf" />
+    <Content Include="App_Data\Flickr1_log.ldf">
+      <DependentUpon>Flickr1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contacts\SearchFriends.aspx" />
+    <Content Include="FriendsProfile.aspx" />
+    <Content Include="help.aspx" />
+    <Content Include="Images\FlickrLogo.GIF" />
+    <Content Include="Mail\ComposeMail.aspx" />
+    <Content Include="Mail\InBox.aspx" />
+    <Content Include="Mail\Mail.aspx" />
+    <Content Include="Mail\SentBox.aspx" />
+    <Content Include="Mail\ShowEmail.aspx" />
+    <Content Include="Mail\ShowSentBoxEmail.aspx" />
+    <Content Include="Photos\AllGalleryPhotos.aspx" />
+    <Content Include="Photos\AllSetPhotos.aspx" />
+    <Content Include="Photos\ChangePassword.aspx" />
+    <Content Include="Photos\CreateNewSet.aspx" />
+    <Content Include="Photos\EditBuddyIcon.aspx" />
+    <Content Include="Photos\EditProfile.aspx" />
+    <Content Include="Photos\Favorites.aspx" />
+    <Content Include="Photos\Galleries.aspx" />
+    <Content Include="Photos\GalleriesNew.aspx" />
+    <Content Include="Photos\MyGalleries.aspx" />
+    <Content Include="Photos\Phototags.aspx" />
+    <Content Include="Photos\Sets.aspx" />
+    <Content Include="Photos\Photostream.aspx" />
+    <Content Include="photoZoom.aspx" />
+    <Content Include="profile.jpg" />
+    <Content Include="PublicPhotos.aspx" />
+    <Content Include="SearchResults.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="TermsAndCondition.aspx" />
+    <Content Include="Upload.aspx" />
+    <Content Include="ViewPhoto.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ReportedUsers.aspx.cs">
+      <DependentUpon>ReportedUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\ReportedUsers.aspx.designer.cs">
+      <DependentUpon>ReportedUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ShareWithExplorer.aspx.cs">
+      <DependentUpon>ShareWithExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\ShareWithExplorer.aspx.designer.cs">
+      <DependentUpon>ShareWithExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\TermsAndCondition.aspx.cs">
+      <DependentUpon>TermsAndCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\TermsAndCondition.aspx.designer.cs">
+      <DependentUpon>TermsAndCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlickrPhotos.aspx.cs">
+      <DependentUpon>FlickrPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlickrPhotos.aspx.designer.cs">
+      <DependentUpon>FlickrPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\SearchFriends.aspx.cs">
+      <DependentUpon>SearchFriends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\SearchFriends.aspx.designer.cs">
+      <DependentUpon>SearchFriends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FriendsProfile.aspx.cs">
+      <DependentUpon>FriendsProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FriendsProfile.aspx.designer.cs">
+      <DependentUpon>FriendsProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="help.aspx.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="help.aspx.designer.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\ComposeMail.aspx.cs">
+      <DependentUpon>ComposeMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\ComposeMail.aspx.designer.cs">
+      <DependentUpon>ComposeMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\InBox.aspx.cs">
+      <DependentUpon>InBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\InBox.aspx.designer.cs">
+      <DependentUpon>InBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Mail.aspx.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\Mail.aspx.designer.cs">
+      <DependentUpon>Mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\SentBox.aspx.cs">
+      <DependentUpon>SentBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\SentBox.aspx.designer.cs">
+      <DependentUpon>SentBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\ShowEmail.aspx.cs">
+      <DependentUpon>ShowEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\ShowEmail.aspx.designer.cs">
+      <DependentUpon>ShowEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\ShowSentBoxEmail.aspx.cs">
+      <DependentUpon>ShowSentBoxEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\ShowSentBoxEmail.aspx.designer.cs">
+      <DependentUpon>ShowSentBoxEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Folder.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Photos\AllGalleryPhotos.aspx.cs">
+      <DependentUpon>AllGalleryPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\AllGalleryPhotos.aspx.designer.cs">
+      <DependentUpon>AllGalleryPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\AllSetPhotos.aspx.cs">
+      <DependentUpon>AllSetPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\AllSetPhotos.aspx.designer.cs">
+      <DependentUpon>AllSetPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\CreateNewSet.aspx.cs">
+      <DependentUpon>CreateNewSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\CreateNewSet.aspx.designer.cs">
+      <DependentUpon>CreateNewSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\EditBuddyIcon.aspx.cs">
+      <DependentUpon>EditBuddyIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\EditBuddyIcon.aspx.designer.cs">
+      <DependentUpon>EditBuddyIcon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\Favorites.aspx.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\Favorites.aspx.designer.cs">
+      <DependentUpon>Favorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\Galleries.aspx.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\Galleries.aspx.designer.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\GalleriesNew.aspx.cs">
+      <DependentUpon>GalleriesNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\GalleriesNew.aspx.designer.cs">
+      <DependentUpon>GalleriesNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\MyGalleries.aspx.cs">
+      <DependentUpon>MyGalleries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\MyGalleries.aspx.designer.cs">
+      <DependentUpon>MyGalleries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\Phototags.aspx.cs">
+      <DependentUpon>Phototags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\Phototags.aspx.designer.cs">
+      <DependentUpon>Phototags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\Sets.aspx.cs">
+      <DependentUpon>Sets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\Sets.aspx.designer.cs">
+      <DependentUpon>Sets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photos\Photostream.aspx.cs">
+      <DependentUpon>Photostream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photos\Photostream.aspx.designer.cs">
+      <DependentUpon>Photostream.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="photoZoom.aspx.cs">
+      <DependentUpon>photoZoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="photoZoom.aspx.designer.cs">
+      <DependentUpon>photoZoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicPhotos.aspx.cs">
+      <DependentUpon>PublicPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPhotos.aspx.designer.cs">
+      <DependentUpon>PublicPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TermsAndCondition.aspx.cs">
+      <DependentUpon>TermsAndCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndCondition.aspx.designer.cs">
+      <DependentUpon>TermsAndCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPhoto.aspx.cs">
+      <DependentUpon>ViewPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPhoto.aspx.designer.cs">
+      <DependentUpon>ViewPhoto.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProfilePhotos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50336</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

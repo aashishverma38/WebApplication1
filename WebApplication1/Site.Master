@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Flickr.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+               <asp:Image ID="Images" runat="server" ImageUrl="~/Images/flickr-logo_w500.jpg" Height="80" Width="100"/>
+               
+            </div>
+            <div class="loginDisplay">
+                <%
+                   if (Session["currUser"] == null)
+                   {
+                %>[ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                <% 
+                   }
+                   else
+                   { 
+                %>Welcome <span class="bold"><%= Session["currUser"] %></span>!
+                    [ <asp:LinkButton ID="lnkbtnLogout" runat="server" 
+                    onclick="lnkbtnLogout_Click">Logout</asp:LinkButton> ]
+                <% } %>
+            </div>
+            <div class="clear hideSkiplink">
+            
+                <asp:Menu ID="NavigationMenuUser" runat="server" CssClass="menu" EnableViewState="false" 
+                IncludeStyleBlock="false" Orientation="Horizontal" Visible="false">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem Text="Contacts">
+                            <asp:MenuItem NavigateUrl="~/Contacts/SearchFriends.aspx" Text="Search Friends"/>
+                            <asp:MenuItem NavigateUrl="~/Contacts/Contacts.aspx" Text="My Contacts"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="My">
+                             <asp:MenuItem NavigateUrl="~/Photos/EditProfile.aspx" Text="My Profile"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Photostream.aspx" Text="My Photostream"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Sets.aspx" Text="My Sets"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/MyGalleries.aspx" Text="My Galleries"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Favorites.aspx" Text="My Favorites"/> 
+                             <asp:MenuItem NavigateUrl="~/Photos/ChangePassword.aspx" Text="Change Password"/> 
+                                                   
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Upload.aspx" Text="Upload"/>
+                        <asp:MenuItem NavigateUrl="~/Mail/Mail.aspx" Text="Flickr Mail"/>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="NavigationMenuCommon" runat="server" CssClass="menu" EnableViewState="false" 
+                IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>
+            
+                <asp:Menu ID="NavigationMenuAdministrator" runat="server" CssClass="menu" EnableViewState="false" 
+                IncludeStyleBlock="false" Orientation="Horizontal" Visible="false">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Administrator/Home.aspx" Text="Home"/>
+                       
+                        <asp:MenuItem Text="Account">
+                            <asp:MenuItem NavigateUrl="~/Photos/EditProfile.aspx" Text="Edit Profile"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/ChangePassword.aspx" Text="Edit Password"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="About Users">
+                             <asp:MenuItem NavigateUrl="~/Photos/EditProfile.aspx" Text="My Profile"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Photostream.aspx" Text="My Photostream"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Sets.aspx" Text="My Sets"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Galleries.aspx" Text="My Galleries"/>
+                            <asp:MenuItem NavigateUrl="~/Photos/Favorites.aspx" Text="My Favorites"/> 
+                             <asp:MenuItem NavigateUrl="~/Photos/ChangePassword.aspx" Text="Change Password"/> 
+                             
+                                                   
+                        </asp:MenuItem>
+                       
+                        <asp:MenuItem NavigateUrl="~/Mail/Mail.aspx" Text="Flickr Mail"/>
+                        <asp:MenuItem NavigateUrl="~/Administrator/TermsAndCondition.aspx" Text="Security And Access Rights"/>
+                         <asp:MenuItem NavigateUrl="~/Administrator/Search.aspx" Text="Search"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+           
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        <div class="footer" style="height: 31px">
+    
+           <!-- <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TermsAndCondition.aspx" style="float: left">Terms and Conditions</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" 
+                style="float: left; width: 134px; margin-left: 17px;" NavigateUrl="~/help.aspx">Contact Adminisrator</asp:HyperLink>
+                -->
+            &nbsp;
+            <asp:LinkButton ID="TermCondition" runat="server" ForeColor="White" 
+                onclick="LinkButton1_Click">Terms And Condition</asp:LinkButton>
+&nbsp; |&nbsp;&nbsp;
+            <asp:LinkButton ID="ContactAdministrator" runat="server" ForeColor="White" 
+                onclick="ContactAdministrator_Click">Contact Administrator</asp:LinkButton>
+            </div>
+        </div>
+    </div>    
+    </form>
+</body>
+</html>
